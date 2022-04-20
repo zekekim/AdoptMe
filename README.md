@@ -27,22 +27,26 @@ This app will be used by people who want to adopt pets from animal welfare progr
 
 **Required Must-have Stories**
 
+* [x] - Setup initial project
+* [x] - Setup launch screen and show app logo
+* [ ] - Setup backend
 * [ ] - Create login/register/continue as guest screen
-* [ ] - Input or grab the location of user
-* [ ] - Spit out a list of pets, their characteristics, and the distance from your current location
+* [ ] - User stays logged in when exiting app
 * [ ] - User can update their password
 * [ ] - User can logout from their account
-* [ ] - User stays logged in when exiting app
-* [ ] - Setup backend
-* [ ] - Setup initial project
-* [ ] - Setup launch screen and show app logo
+* [ ] - Input or grab the location of user
+* [ ] - Spit out a list of pets, their characteristics, and the distance from your current location
+* [ ] - Get access to Dog API
+* [ ] - Implement the dog swiping page
+* [ ] - Implement the dog collection view page
+
 
 **Optional Stories**
 
-* [ ] - Display parking prices and if it is meter/less
 * [ ] - Automatically find location using user location
 * [ ] - Display locations on MapKit (or similar)
-* [ ] - Login to find user preferred parking
+* [ ] - New UI Implementation or Fixes
+
 
 ### 2. Screen Archetypes
 * Login
