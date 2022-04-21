@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,9 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+//        let parseConfig = ParseClientConfiguration {
+//                            $0.applicationId = "il9aUYSaRcAG9DBdbjasjHLadOxO9Xc3xUvI4P8L"         // This is Farhans
+//                            $0.clientKey = "mXsuJtXFK4TkDlMlN2GdKhJXF87ANWpRjwDeqIJG"
+//                            $0.server = "https://parseapi.back4app.com"
+//                    }
+        
         let parseConfig = ParseClientConfiguration {
-                            $0.applicationId = "il9aUYSaRcAG9DBdbjasjHLadOxO9Xc3xUvI4P8L"
-                            $0.clientKey = "mXsuJtXFK4TkDlMlN2GdKhJXF87ANWpRjwDeqIJG"
+                            $0.applicationId = "GM83OVHOG591R9gwRV6vxXPwTM5g3yZeEKa0eIR2"           // This is Alan's parse
+                            $0.clientKey = "CTSKuo0e3dC0qnIHZw1Ge8LJkmEJfhH10tEFGonB"
                             $0.server = "https://parseapi.back4app.com"
                     }
                     Parse.initialize(with: parseConfig)
