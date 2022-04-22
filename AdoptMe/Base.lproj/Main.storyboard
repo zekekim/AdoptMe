@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="AdoptMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -53,54 +53,66 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbt-Ah-Fh1">
-                                <rect key="frame" x="65" y="497" width="270" height="31"/>
+                                <rect key="frame" x="38" y="505" width="329" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="329" id="JoK-uB-nmE"/>
+                                </constraints>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="CONTINUE">
                                             <attributes>
-                                                <font key="NSFont" size="14" name=".SFNS-Black"/>
+                                                <font key="NSFont" metaFont="menu" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content=" ">
                                             <attributes>
                                                 <font key="NSFont" size="14" name="NotoSansMyanmar-Black"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content="FINDING">
                                             <attributes>
-                                                <font key="NSFont" size="14" name=".SFNS-Black"/>
+                                                <font key="NSFont" metaFont="menu" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content=" ">
                                             <attributes>
                                                 <font key="NSFont" size="14" name="NotoSansMyanmar-Black"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content="DOGS">
                                             <attributes>
-                                                <font key="NSFont" size="14" name=".SFNS-Black"/>
+                                                <font key="NSFont" metaFont="menu" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content=" ">
                                             <attributes>
                                                 <font key="NSFont" size="14" name="NotoSansMyanmar-Black"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content="AS">
                                             <attributes>
-                                                <font key="NSFont" size="14" name=".SFNS-Black"/>
+                                                <font key="NSFont" metaFont="menu" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content=" ">
                                             <attributes>
                                                 <font key="NSFont" size="14" name="NotoSansMyanmar-Black"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content="GUEST">
                                             <attributes>
-                                                <font key="NSFont" size="14" name=".SFNS-Black"/>
+                                                <font key="NSFont" metaFont="menu" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -116,13 +128,15 @@
                         <constraints>
                             <constraint firstItem="1xf-Zc-dBd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="2ea-mX-hsx"/>
                             <constraint firstItem="wdz-Lh-AjE" firstAttribute="trailing" secondItem="WMW-6R-CHz" secondAttribute="trailing" constant="-1" id="3sm-uJ-7nA"/>
+                            <constraint firstAttribute="leading" secondItem="cbt-Ah-Fh1" secondAttribute="leading" constant="-43" id="IPU-47-pGy"/>
+                            <constraint firstAttribute="trailing" secondItem="cbt-Ah-Fh1" secondAttribute="trailingMargin" constant="60" id="JPF-4f-CUB"/>
                             <constraint firstItem="wdz-Lh-AjE" firstAttribute="leading" secondItem="WMW-6R-CHz" secondAttribute="leading" id="Le2-jB-cjf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1xf-Zc-dBd" secondAttribute="bottom" constant="503" id="Ltj-Vd-qdm"/>
                             <constraint firstItem="1xf-Zc-dBd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="U5i-s0-1Mr"/>
                             <constraint firstItem="1xf-Zc-dBd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQC-pH-vcV"/>
+                            <constraint firstItem="cbt-Ah-Fh1" firstAttribute="top" secondItem="WMW-6R-CHz" secondAttribute="bottom" constant="16" id="VYw-rf-rcj"/>
                             <constraint firstItem="wdz-Lh-AjE" firstAttribute="top" secondItem="1xf-Zc-dBd" secondAttribute="bottom" constant="9" id="dgE-jq-ZEz"/>
-                            <constraint firstItem="cbt-Ah-Fh1" firstAttribute="top" secondItem="WMW-6R-CHz" secondAttribute="bottom" constant="8" id="k8e-NS-nn0"/>
-                            <constraint firstItem="cbt-Ah-Fh1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="mlp-hZ-XmQ"/>
+                            <constraint firstItem="cbt-Ah-Fh1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="hcx-rz-BsV"/>
                             <constraint firstItem="WMW-6R-CHz" firstAttribute="top" secondItem="wdz-Lh-AjE" secondAttribute="bottom" constant="19" id="vtX-ga-Xji"/>
                             <constraint firstItem="wdz-Lh-AjE" firstAttribute="centerX" secondItem="1xf-Zc-dBd" secondAttribute="centerX" constant="-0.5" id="zT8-7U-Llz"/>
                         </constraints>
@@ -244,14 +258,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeB-um-rGz">
-                                <rect key="frame" x="286" y="113" width="119" height="30"/>
+                                <rect key="frame" x="286" y="113" width="119" height="31"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="LOGOUT">
                                             <attributes>
-                                                <font key="NSFont" size="14" name=".SFNS-Bold"/>
+                                                <font key="NSFont" metaFont="menu" size="14"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -335,7 +349,7 @@
                                     <constraint firstAttribute="height" constant="52" id="njJ-lJ-cNT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-MB-bTY" userLabel="emailField">
                                 <rect key="frame" x="20" y="384" width="351" height="52"/>

@@ -19,15 +19,6 @@ class LoginViewController: UIViewController {
 
     @IBAction func onRegister(_ sender: Any) {
         let user = PFUser()
-//        user.username = usernameField.text;
-//        user.password = passwordField.text;
         self.performSegue(withIdentifier: "registerSegue", sender: nil)
-//        user.signUpInBackground { (success, error) in
-//            if (success) {
-//                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-//            } else {
-//                print("Error: \(error?.localizedDescription)")
-//            }
-//        }
     }
 }
