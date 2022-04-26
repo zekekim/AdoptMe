@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tln-4h-mJQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="AdoptMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -291,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaI-pY-4iR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663.7681159420292" y="393.75"/>
+            <point key="canvasLocation" x="1754" y="548"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="L8d-1h-0QL">
@@ -411,10 +411,77 @@
             </objects>
             <point key="canvasLocation" x="897" y="-247"/>
         </scene>
+        <!--Swiping Page View Controller-->
+        <scene sceneID="Su2-Bf-1i0">
+            <objects>
+                <viewController id="Tln-4h-mJQ" customClass="SwipingPageViewController" customModule="AdoptMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4q-p5-k7I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-16-bC6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="gLG-hC-h5K"/>
+                                    <constraint firstAttribute="height" constant="44" id="tj6-0D-OzT"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="h8j-dy-yFp">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Eur-Wi-Y7N">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="View Your Dog Collection" id="lg1-ng-e4A">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ABX-Id-xat">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pRR-cK-mN7">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="703.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xEm-wb-K8j">
+                                        <rect key="frame" x="0.0" y="703.5" width="374" height="70.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hva-Ks-Tyw">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="70.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="02l-bX-ovh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ABX-Id-xat" firstAttribute="top" secondItem="PJz-16-bC6" secondAttribute="bottom" id="461-vK-QsW"/>
+                            <constraint firstItem="02l-bX-ovh" firstAttribute="trailing" secondItem="ABX-Id-xat" secondAttribute="trailing" constant="20" id="J4w-XU-1Jj"/>
+                            <constraint firstItem="PJz-16-bC6" firstAttribute="trailing" secondItem="02l-bX-ovh" secondAttribute="trailing" id="Ld2-ih-KKg"/>
+                            <constraint firstItem="ABX-Id-xat" firstAttribute="leading" secondItem="02l-bX-ovh" secondAttribute="leading" constant="20" id="NET-Ww-rgr"/>
+                            <constraint firstItem="PJz-16-bC6" firstAttribute="top" secondItem="02l-bX-ovh" secondAttribute="top" id="aVL-1Y-z58"/>
+                            <constraint firstItem="ABX-Id-xat" firstAttribute="bottom" secondItem="02l-bX-ovh" secondAttribute="bottom" id="iA9-IN-frF"/>
+                            <constraint firstItem="PJz-16-bC6" firstAttribute="leading" secondItem="02l-bX-ovh" secondAttribute="leading" id="mqU-AX-eaM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="pRR-cK-mN7" id="2ne-a5-zSR"/>
+                        <outlet property="nameLabel" destination="hva-Ks-Tyw" id="JXq-dT-ien"/>
+                        <outlet property="navigationBar" destination="PJz-16-bC6" id="Ki6-QY-8lf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZH-wG-EUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="-230.35714285714283"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="76F-hp-KGh"/>
-        <segue reference="7Sl-pL-CZb"/>
+        <segue reference="Dkq-zl-mqo"/>
+        <segue reference="crL-bJ-Dte"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AdoptMe_Logo" width="1032" height="252"/>
