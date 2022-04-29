@@ -35,10 +35,10 @@ This app will be used by people who want to adopt pets from animal welfare progr
 * [ ] - User can update their password
 * [x] - User can logout from their account
 * [ ] - Input or grab the location of user
-* [ ] - Spit out a list of pets, their characteristics, and the distance from your current location
-* [ ] - Get access to Dog API
-* [ ] - Implement the dog swiping page
-* [ ] - Implement the dog collection view page
+* [X] - Spit out a list of pets, their characteristics, and the distance from your current location
+* [X] - Get access to Dog API
+* [X] - Implement the dog swiping page
+* [X] - Implement the dog collection view page
 
 
 **Optional Stories**
