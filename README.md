@@ -29,11 +29,11 @@ This app will be used by people who want to adopt pets from animal welfare progr
 
 * [x] - Setup initial project
 * [x] - Setup launch screen and show app logo
-* [ ] - Setup backend
-* [ ] - Create login/register/continue as guest screen
-* [ ] - User stays logged in when exiting app
+* [x] - Setup backend
+* [x] - Create login/register/continue as guest screen
+* [x] - User stays logged in when exiting app
 * [ ] - User can update their password
-* [ ] - User can logout from their account
+* [x] - User can logout from their account
 * [ ] - Input or grab the location of user
 * [ ] - Spit out a list of pets, their characteristics, and the distance from your current location
 * [ ] - Get access to Dog API

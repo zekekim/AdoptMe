@@ -18,10 +18,14 @@
 		A1730AC8280A57EC0039DE06 /* AdoptMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1730AC7280A57EC0039DE06 /* AdoptMeTests.swift */; };
 		A1730AD2280A57EC0039DE06 /* AdoptMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1730AD1280A57EC0039DE06 /* AdoptMeUITests.swift */; };
 		A1730AD4280A57EC0039DE06 /* AdoptMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1730AD3280A57EC0039DE06 /* AdoptMeUITestsLaunchTests.swift */; };
+ release-add-api
+		A1F6411C2819249100692FED /* PetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F6411B2819249100692FED /* PetAPI.swift */; };
+		A1F6411E28193AE800692FED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F6411D28193AE800692FED /* Model.swift */; };
 		D5514139281139CF00F97C52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5514138281139CF00F97C52 /* LoginViewController.swift */; };
 		D551413B281145E300F97C52 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D551413A281145E300F97C52 /* SignInViewController.swift */; };
 		D551413D281151A400F97C52 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D551413C281151A400F97C52 /* RegisterViewController.swift */; };
 		D551413F281156E900F97C52 /* searchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D551413E281156E900F97C52 /* searchLocationViewController.swift */; };
+ release
 		FD0EEF1DE8BCF96870AAA76F /* Pods_AdoptMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ECC58D085B5C2CA370F430 /* Pods_AdoptMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,8 @@
 		A1730ACD280A57EC0039DE06 /* AdoptMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1730AD1280A57EC0039DE06 /* AdoptMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptMeUITests.swift; sourceTree = "<group>"; };
 		A1730AD3280A57EC0039DE06 /* AdoptMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1F6411B2819249100692FED /* PetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAPI.swift; sourceTree = "<group>"; };
+		A1F6411D28193AE800692FED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C2516087A86A20B2C51D52E6 /* Pods_AdoptMe_AdoptMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdoptMe_AdoptMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE24C0F9A2D626429A24F4D4 /* Pods-AdoptMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdoptMe.debug.xcconfig"; path = "Target Support Files/Pods-AdoptMe/Pods-AdoptMe.debug.xcconfig"; sourceTree = "<group>"; };
 		D5514138281139CF00F97C52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 		A1730AAF280A57EB0039DE06 /* AdoptMe */ = {
 			isa = PBXGroup;
 			children = (
+				A1F6411A2819247D00692FED /* PetFinderAPI */,
 				A1730AB0280A57EB0039DE06 /* AppDelegate.swift */,
 				A1730AB2280A57EB0039DE06 /* SceneDelegate.swift */,
 				A1730AB4280A57EB0039DE06 /* ViewController.swift */,
@@ -177,6 +184,15 @@
 				A1730AD3280A57EC0039DE06 /* AdoptMeUITestsLaunchTests.swift */,
 			);
 			path = AdoptMeUITests;
+			sourceTree = "<group>";
+		};
+		A1F6411A2819247D00692FED /* PetFinderAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A1F6411B2819249100692FED /* PetAPI.swift */,
+				A1F6411D28193AE800692FED /* Model.swift */,
+			);
+			path = PetFinderAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,13 +434,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+ release-add-api
+				A1F6411E28193AE800692FED /* Model.swift in Sources */,
+
 				D5514139281139CF00F97C52 /* LoginViewController.swift in Sources */,
+ release
 				A1730AB5280A57EB0039DE06 /* ViewController.swift in Sources */,
 				A1730AB1280A57EB0039DE06 /* AppDelegate.swift in Sources */,
 				D551413D281151A400F97C52 /* RegisterViewController.swift in Sources */,
 				D551413F281156E900F97C52 /* searchLocationViewController.swift in Sources */,
 				D551413B281145E300F97C52 /* SignInViewController.swift in Sources */,
 				A1730AB3280A57EB0039DE06 /* SceneDelegate.swift in Sources */,
+				A1F6411C2819249100692FED /* PetAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
