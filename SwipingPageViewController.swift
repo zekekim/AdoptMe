@@ -20,7 +20,6 @@ class SwipingPageViewController: UIViewController {
     
     
     
-    
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var navigationBar: UINavigationBar!
@@ -28,6 +27,8 @@ class SwipingPageViewController: UIViewController {
     @IBOutlet weak var card: UIView!
     var ogCardPoint: CGPoint?
     var divisor: CGFloat!
+    
+    
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
