@@ -32,7 +32,6 @@ class SwipingPageViewController: UIViewController {
     var divisor: CGFloat!
     
     
-    
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
         let point = sender.translation(in: view)
@@ -75,6 +74,7 @@ class SwipingPageViewController: UIViewController {
                 })
                 return
             }
+            
             
             
             // Animate card back to center
