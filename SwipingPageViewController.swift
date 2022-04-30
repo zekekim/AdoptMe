@@ -19,6 +19,9 @@ class SwipingPageViewController: UIViewController {
     }
     
     
+    @IBAction func onBackBtn(_ sender: UIBarButtonItem) {
+        dismiss(animated:true, completion: nil)
+    }
     
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var dogImage: UIImageView!
