@@ -240,4 +240,7 @@ This app will be used by people who want to adopt pets from animal welfare progr
 ## Sprint 1
 <img src='https://github.com/Alankvuong/ParkMe/blob/main/ParkMe-Sprint1-ShowLaunchScreen.gif?raw=true' />
 
+## Sprint 2
+<img src='https://github.com/zekekim/AdoptMe/blob/release/AdoptMe-Sprint2.gif?raw=true' />
+
 
