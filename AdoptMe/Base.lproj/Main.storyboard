@@ -180,7 +180,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    Create a username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LMW-qB-4No" userLabel="UsernameField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    Create a username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LMW-qB-4No">
                                 <rect key="frame" x="20" y="233" width="351" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="351" id="TRP-tL-gxC"/>
@@ -189,7 +189,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    Create a password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8Q-TE-elc" userLabel="PasswordField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    Create a password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8Q-TE-elc">
                                 <rect key="frame" x="20" y="299" width="351" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="351" id="dDF-ed-B0C"/>
@@ -213,6 +213,7 @@
                                 <connections>
                                     <action selector="onRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNF-zh-xfK"/>
                                     <action selector="onSignIn:" destination="Hn3-am-6j9" eventType="touchUpInside" id="04X-Df-LZF"/>
+                                    <segue destination="tEa-aK-5jx" kind="presentation" identifier="signInSegue" id="bd1-oY-cWc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,14 +234,12 @@
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="D8Q-TE-elc" id="Az4-VF-BoQ"/>
-                        <outlet property="signInBtn" destination="oiO-h2-eal" id="269-2W-rzv"/>
                         <outlet property="usernameField" destination="LMW-qB-4No" id="wIT-27-rh8"/>
-                        <segue destination="tEa-aK-5jx" kind="presentation" identifier="signInSegue" id="76F-hp-KGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dx-N4-46K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="549"/>
+            <point key="canvasLocation" x="895.6521739130435" y="394.41964285714283"/>
         </scene>
         <!--Search Location View Controller-->
         <scene sceneID="TiF-lr-glL">
@@ -291,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaI-pY-4iR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="548"/>
+            <point key="canvasLocation" x="1663.7681159420292" y="393.75"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="L8d-1h-0QL">
@@ -375,6 +374,7 @@
                                 <connections>
                                     <action selector="onRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBz-Uc-fdm"/>
                                     <action selector="onSignUpButton:" destination="3in-Uy-6AC" eventType="touchUpInside" id="Nxj-Qm-dN5"/>
+                                    <segue destination="Hn3-am-6j9" kind="presentation" identifier="signInSegue" id="QYK-y5-b4z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -402,9 +402,7 @@
                     <connections>
                         <outlet property="emailField" destination="bMJ-MB-bTY" id="UJB-85-t0a"/>
                         <outlet property="passwordField" destination="BdI-wH-DTD" id="sbq-T4-8mI"/>
-                        <outlet property="signUpBtn" destination="hLP-8V-rXd" id="E29-qy-68P"/>
                         <outlet property="usernameField" destination="xBj-KW-QNR" id="EkB-vU-zbr"/>
-                        <segue destination="Hn3-am-6j9" kind="presentation" identifier="signUpSegue" id="7Sl-pL-CZb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7Q-lo-nqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -502,11 +500,11 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1795.6521739130437" y="-230.35714285714283"/>
+            <point key="canvasLocation" x="1778" y="-258"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bd1-oY-cWc"/>
+        <segue reference="Dkq-zl-mqo"/>
         <segue reference="crL-bJ-Dte"/>
     </inferredMetricsTieBreakers>
     <resources>
