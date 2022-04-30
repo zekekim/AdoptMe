@@ -18,14 +18,12 @@
 		A1730AC8280A57EC0039DE06 /* AdoptMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1730AC7280A57EC0039DE06 /* AdoptMeTests.swift */; };
 		A1730AD2280A57EC0039DE06 /* AdoptMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1730AD1280A57EC0039DE06 /* AdoptMeUITests.swift */; };
 		A1730AD4280A57EC0039DE06 /* AdoptMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1730AD3280A57EC0039DE06 /* AdoptMeUITestsLaunchTests.swift */; };
- release-add-api
 		A1F6411C2819249100692FED /* PetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F6411B2819249100692FED /* PetAPI.swift */; };
 		A1F6411E28193AE800692FED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F6411D28193AE800692FED /* Model.swift */; };
 		D5514139281139CF00F97C52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5514138281139CF00F97C52 /* LoginViewController.swift */; };
 		D551413B281145E300F97C52 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D551413A281145E300F97C52 /* SignInViewController.swift */; };
 		D551413D281151A400F97C52 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D551413C281151A400F97C52 /* RegisterViewController.swift */; };
 		D551413F281156E900F97C52 /* searchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D551413E281156E900F97C52 /* searchLocationViewController.swift */; };
- release
 		FD0EEF1DE8BCF96870AAA76F /* Pods_AdoptMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ECC58D085B5C2CA370F430 /* Pods_AdoptMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -434,11 +432,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
- release-add-api
 				A1F6411E28193AE800692FED /* Model.swift in Sources */,
-
 				D5514139281139CF00F97C52 /* LoginViewController.swift in Sources */,
- release
 				A1730AB5280A57EB0039DE06 /* ViewController.swift in Sources */,
 				A1730AB1280A57EB0039DE06 /* AppDelegate.swift in Sources */,
 				D551413D281151A400F97C52 /* RegisterViewController.swift in Sources */,
@@ -623,7 +618,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LGD44GGZRC;
+				DEVELOPMENT_TEAM = D9256J4546;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdoptMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -652,7 +647,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LGD44GGZRC;
+				DEVELOPMENT_TEAM = D9256J4546;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdoptMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -681,7 +676,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2QNPL847WD;
+				DEVELOPMENT_TEAM = D9256J4546;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
@@ -702,7 +697,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2QNPL847WD;
+				DEVELOPMENT_TEAM = D9256J4546;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
@@ -722,7 +717,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2QNPL847WD;
+				DEVELOPMENT_TEAM = D9256J4546;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codepath.AdoptMeUITests;
@@ -741,7 +736,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2QNPL847WD;
+				DEVELOPMENT_TEAM = D9256J4546;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codepath.AdoptMeUITests;
