@@ -37,7 +37,7 @@ This app will be used by people who want to adopt pets from animal welfare progr
 * [ ] - Input or grab the location of user
 * [ ] - Spit out a list of pets, their characteristics, and the distance from your current location
 * [ ] - Get access to Dog API
-* [ ] - Implement the dog swiping page
+* [x] - Implement the dog swiping page
 * [ ] - Implement the dog collection view page
 
 
@@ -243,4 +243,5 @@ This app will be used by people who want to adopt pets from animal welfare progr
 ## Sprint 2
 <img src='https://github.com/zekekim/AdoptMe/blob/release/AdoptMe-Sprint2.gif?raw=true' />
 
-
+## Sprint 3
+<img src='https://github.com/zekekim/AdoptMe/blob/release/AdoptMe-Sprint3.gif?raw=true' />
