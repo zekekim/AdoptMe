@@ -274,6 +274,55 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutButtonSegue" id="eyd-Zj-nIR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnc-fZ-7Nn">
+                                <rect key="frame" x="103" y="412" width="209" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SEARCH">
+                                    <backgroundConfiguration key="background" cornerRadius="50">
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your zip code or address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-1S-Nhd">
+                                <rect key="frame" x="56" y="332" width="298" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI7-5B-AVh">
+                                <rect key="frame" x="0.0" y="733" width="414" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Find Your Favorite Pet!">
+                                    <backgroundConfiguration key="background" cornerRadius="0.0">
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Tln-4h-mJQ" kind="presentation" id="c0t-G1-oTM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKW-Vt-H8W">
+                                <rect key="frame" x="0.0" y="798" width="414" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="View in Map">
+                                    <backgroundConfiguration key="background" cornerRadius="0.0">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adopt Pets Near You!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6v3-Ks-659">
+                                <rect key="frame" x="37" y="264" width="341" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MJf-2p-kXJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -290,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaI-pY-4iR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663.7681159420292" y="393.75"/>
+            <point key="canvasLocation" x="1760.8695652173915" y="393.75"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="L8d-1h-0QL">
@@ -409,15 +458,116 @@
             </objects>
             <point key="canvasLocation" x="897" y="-247"/>
         </scene>
+        <!--Swiping Page View Controller-->
+        <scene sceneID="Su2-Bf-1i0">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Tln-4h-mJQ" customClass="SwipingPageViewController" customModule="AdoptMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4q-p5-k7I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-16-bC6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="gLG-hC-h5K"/>
+                                    <constraint firstAttribute="height" constant="44" id="tj6-0D-OzT"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="h8j-dy-yFp">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Eur-Wi-Y7N">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="onBackBtn:" destination="Tln-4h-mJQ" id="1zQ-FH-LOq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="View Your Dog Collection" id="lg1-ng-e4A">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AP2-uC-BH0" userLabel="card">
+                                <rect key="frame" x="20" y="88" width="374" height="443"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="corgi-icon-180x180" translatesAutoresizingMaskIntoConstraints="NO" id="HaT-pQ-IRF" userLabel="dogImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="443"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbsUp" translatesAutoresizingMaskIntoConstraints="NO" id="ete-3X-ahL" userLabel="thumbImageView">
+                                        <rect key="frame" x="59" y="131" width="256" height="246"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yTi-u6-aPF" appends="YES" id="bkf-Zh-3zr"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxL-Q1-tGk" userLabel="cardInfoView">
+                                <rect key="frame" x="20" y="531" width="374" height="331"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsl-KM-KHC" userLabel="resetBtn">
+                                        <rect key="frame" x="132" y="70" width="110" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="RESET"/>
+                                        <connections>
+                                            <action selector="reset:" destination="Tln-4h-mJQ" eventType="touchUpInside" id="tDi-AJ-4zp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="02l-bX-ovh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AP2-uC-BH0" firstAttribute="top" secondItem="PJz-16-bC6" secondAttribute="bottom" id="B60-Il-fr0"/>
+                            <constraint firstItem="dxL-Q1-tGk" firstAttribute="bottom" secondItem="02l-bX-ovh" secondAttribute="bottom" id="C43-c0-wq4"/>
+                            <constraint firstItem="dxL-Q1-tGk" firstAttribute="top" secondItem="o4q-p5-k7I" secondAttribute="top" constant="531" id="CUY-uf-QOY"/>
+                            <constraint firstItem="AP2-uC-BH0" firstAttribute="leading" secondItem="02l-bX-ovh" secondAttribute="leading" constant="20" id="IBL-Ig-OOi"/>
+                            <constraint firstItem="PJz-16-bC6" firstAttribute="trailing" secondItem="02l-bX-ovh" secondAttribute="trailing" id="Ld2-ih-KKg"/>
+                            <constraint firstItem="02l-bX-ovh" firstAttribute="trailing" secondItem="AP2-uC-BH0" secondAttribute="trailing" constant="20" id="YIT-Mj-pgA"/>
+                            <constraint firstItem="PJz-16-bC6" firstAttribute="top" secondItem="02l-bX-ovh" secondAttribute="top" id="aVL-1Y-z58"/>
+                            <constraint firstItem="dxL-Q1-tGk" firstAttribute="leading" secondItem="02l-bX-ovh" secondAttribute="leading" constant="20" id="b08-5Q-UIo"/>
+                            <constraint firstItem="AP2-uC-BH0" firstAttribute="top" secondItem="PJz-16-bC6" secondAttribute="bottom" id="dYp-Y2-jYs"/>
+                            <constraint firstItem="PJz-16-bC6" firstAttribute="leading" secondItem="02l-bX-ovh" secondAttribute="leading" id="mqU-AX-eaM"/>
+                            <constraint firstItem="dxL-Q1-tGk" firstAttribute="top" secondItem="AP2-uC-BH0" secondAttribute="bottom" id="tVV-rZ-3rr"/>
+                            <constraint firstItem="02l-bX-ovh" firstAttribute="trailing" secondItem="dxL-Q1-tGk" secondAttribute="trailing" constant="20" id="yZx-Bf-37o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="card" destination="AP2-uC-BH0" id="5Mm-rF-zf9"/>
+                        <outlet property="dogImage" destination="HaT-pQ-IRF" id="WBv-Km-QuA"/>
+                        <outlet property="navigationBar" destination="PJz-16-bC6" id="Ki6-QY-8lf"/>
+                        <outlet property="thumbImageView" destination="ete-3X-ahL" id="AWT-iU-umd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZH-wG-EUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="yTi-u6-aPF">
+                    <connections>
+                        <action selector="panCard:" destination="Tln-4h-mJQ" id="mZL-T5-MiK"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1778" y="-258"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bd1-oY-cWc"/>
-        <segue reference="crL-bJ-Dte"/>
+        <segue reference="Dkq-zl-mqo"/>
+        <segue reference="QYK-y5-b4z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AdoptMe_Logo" width="1032" height="252"/>
+        <image name="corgi-icon-180x180" width="180" height="180"/>
+        <image name="thumbsUp" width="570" height="665"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
