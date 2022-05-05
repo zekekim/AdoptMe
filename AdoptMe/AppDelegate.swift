@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             $0.server = "https://parseapi.back4app.com"
                     }
                     Parse.initialize(with: parseConfig)
-        
         // Override point for customization after application launch.
         return true
     }

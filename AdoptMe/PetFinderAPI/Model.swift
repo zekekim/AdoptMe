@@ -28,18 +28,16 @@ struct Dogs: Decodable {
 }
 
 struct Dog:Decodable {
-    let id: Int
-    let url: String
+    let url: String?
     //TODO: Better way to decode breeds, for rn my solution is -- let breeds: [Any]
-    let age: String
-    let name: String
-    let description: String
-    let photos: [String]
-    let contact: Contact
-    let status: String
+    let age: String?
+    let name: String?
+    let description: String?
+    let photos: [Photo]
+    let contact: Contact?
+    let status: String?
     
     enum CodingKeys:String, CodingKey {
-        case id = "id"
         case url = "url"
         case age = "age"
         case name = "name"
@@ -51,10 +49,36 @@ struct Dog:Decodable {
     
 }
 
+struct Photo:Decodable {
+    let small: String?
+    let medium: String?
+    let large: String?
+    let full: String?
+    enum CodingKeys:String, CodingKey {
+        case large = "large"
+        case medium = "medium"
+        case small = "small"
+        case full = "full"
+    }
+}
+
+struct Breeds: Decodable {
+    let primary: String?
+    let secondary: String?
+    let mixed: Bool
+    let unknown: Bool
+    enum CodingKeys: String, CodingKey {
+        case primary = "primary"
+        case secondary = "secondary"
+        case mixed = "mixed"
+        case unknown = "unknown"
+    }
+}
+
 struct Contact: Decodable {
-    let email: String
-    let phone: String
-    let address: Address
+    let email: String?
+    let phone: String?
+    let address: Address?
     
     enum CodingKeys:String, CodingKey {
         case email = "email"
@@ -64,10 +88,10 @@ struct Contact: Decodable {
 }
 
 struct Address: Decodable {
-    let city: String
-    let state: String
-    let postCode: String
-    let country: String
+    let city: String?
+    let state: String?
+    let postCode: String?
+    let country: String?
     
     enum CodingKeys: String, CodingKey {
         case city = "city"
