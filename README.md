@@ -246,3 +246,7 @@ This app will be used by people who want to adopt pets from animal welfare progr
 
 ## Sprint 3
 <img src='https://github.com/zekekim/AdoptMe/blob/release/AdoptMe-Sprint3.gif?raw=true' />
+
+## Sprint 4
+![Simulator Screen Recording - iPhone 11 - 2022-05-04 at 22 40 21](https://user-images.githubusercontent.com/69071301/166869134-13bcedd7-d8b5-42a4-92d5-dc46f7f340fb.gif)
+
