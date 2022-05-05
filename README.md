@@ -41,6 +41,7 @@ This app will be used by people who want to adopt pets from animal welfare progr
 * [ ] - Implement the dog collection view page
 
 
+
 **Optional Stories**
 
 * [ ] - Automatically find location using user location
