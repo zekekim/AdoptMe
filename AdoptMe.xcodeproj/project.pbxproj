@@ -131,7 +131,6 @@
 		A1730AA4280A57EB0039DE06 = {
 			isa = PBXGroup;
 			children = (
-				4170697D28165F2B00F13B83 /* SwipingPageViewController.swift */,
 				A1730AAF280A57EB0039DE06 /* AdoptMe */,
 				A1730AC6280A57EC0039DE06 /* AdoptMeTests */,
 				A1730AD0280A57EC0039DE06 /* AdoptMeUITests */,
@@ -162,6 +161,7 @@
 				A1730AB9280A57EC0039DE06 /* Assets.xcassets */,
 				A1730ABB280A57EC0039DE06 /* LaunchScreen.storyboard */,
 				A1730ABE280A57EC0039DE06 /* Info.plist */,
+				4170697D28165F2B00F13B83 /* SwipingPageViewController.swift */,
 				D5514138281139CF00F97C52 /* LoginViewController.swift */,
 				D551413A281145E300F97C52 /* SignInViewController.swift */,
 				D551413C281151A400F97C52 /* RegisterViewController.swift */,

@@ -7,15 +7,68 @@
 
 import UIKit
 
+
 class SwipingPageViewController: UIViewController {
-
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         ogCardPoint = card.center
         
+        var token: String? = nil
+        
         divisor = (view.frame.width / 2) / 0.61
+        api.authenticate { (result) in
+            if(result == "nope")
+            {
+                
+                print("error")
+                return
+                //HANDLE AUTHENTICATE ERROR
+            }
+            else {
+                self.initToken = result
+                token = result
+                self.api.fetch(token: token!) { (result) in
+                    if(result == nil)
+                    {
+                        print("error")
+                        return
+                        //HANDLE DOG EMPTY RESPONSE
+                    }
+                    else {
+                        self.dogArray = result!.filter{$0.photos.count > 0}
+                        self.loadCard()
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
+    //Loads Random Dog Into Card
+    //Current Dog is stored in currentDog
+    
+    func loadCard() {
+        dogImage.image = UIImage(named: "corgi-icon-180x180")
+        let randInt = Int.random(in: 0..<dogArray!.count)
+        let dog = dogArray![randInt]
+        currentDog = dog
+        if !(currentDog?.photos.count == 0)  {
+            getData(from: URL(string: currentDog?.photos[0].large ?? "")!) { data, response, error in
+                guard let data = data, error == nil else {return}
+                DispatchQueue.main.async() { [weak self] in
+                    self?.dogImage.image = UIImage(data: data)
+                }
+            }
+        }
+        
     }
     
     
@@ -30,7 +83,10 @@ class SwipingPageViewController: UIViewController {
     @IBOutlet weak var card: UIView!
     var ogCardPoint: CGPoint?
     var divisor: CGFloat!
-    
+    var api = PetAPI()
+    var initToken: String?
+    var dogArray: [Dog]?
+    var currentDog: Dog?
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
@@ -83,22 +139,28 @@ class SwipingPageViewController: UIViewController {
                 self.thumbImageView.alpha = 0
                 self.card.transform = CGAffineTransform.identity
             })
+            loadCard()
         }
         
     }
     
     @IBAction func reset(_ sender: UIButton) {
         resetCard()
+        loadCard()
     }
     
     func resetCard() {
+        
         UIView.animate(withDuration: 0.2, animations: {
             self.card.center = self.ogCardPoint!
             self.thumbImageView.alpha = 0
             self.card.alpha = 1
             // undos transformationn on card
             self.card.transform = CGAffineTransform.identity
+            let imageView = UIProgressView()
+            self.dogImage.addSubview(imageView)
         })
+        
     }
     
     // Function displays thumbs up on dogImage. Called when card is being swiped rightward
