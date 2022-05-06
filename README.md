@@ -246,3 +246,6 @@ This app will be used by people who want to adopt pets from animal welfare progr
 
 ## Sprint 3
 <img src='https://github.com/zekekim/AdoptMe/blob/release/AdoptMe-Sprint3.gif?raw=true' />
+
+## Sprint 3
+<img src='https://github.com/zekekim/AdoptMe/blob/release/AdoptMe-Sprint4.gif' />
