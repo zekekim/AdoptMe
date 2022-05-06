@@ -10,16 +10,27 @@ import UIKit
 
 class SwipingPageViewController: UIViewController {
     
+    @IBOutlet weak var thumbImageView: UIImageView!
+    @IBOutlet weak var dogImage: UIImageView!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    //@IBOutlet weak var imageView: UIImageView! // Holds image of dog
+    @IBOutlet weak var card: UIView!
+    var ogCardPoint: CGPoint?
+    var divisor: CGFloat!
+    var api = PetAPI()
+    var initToken: String?
+    var dogArray: [Dog]?
+    var currentDog: Dog?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         ogCardPoint = card.center
-        
-        var token: String? = nil
-        
         divisor = (view.frame.width / 2) / 0.61
+
+        var token: String? = nil
         api.authenticate { (result) in
             if(result == "nope")
             {
@@ -57,16 +68,27 @@ class SwipingPageViewController: UIViewController {
     
     func loadCard() {
         dogImage.image = UIImage(named: "corgi-icon-180x180")
-        let randInt = Int.random(in: 0..<dogArray!.count)
-        let dog = dogArray![randInt]
-        currentDog = dog
-        if !(currentDog?.photos.count == 0)  {
-            getData(from: URL(string: currentDog?.photos[0].large ?? "")!) { data, response, error in
-                guard let data = data, error == nil else {return}
-                DispatchQueue.main.async() { [weak self] in
-                    self?.dogImage.image = UIImage(data: data)
+        
+        var randInt:Int
+        var dog:Dog?
+        
+        if dogArray != nil {
+            randInt = Int.random(in: 0..<dogArray!.count)
+            dog = dogArray![randInt]
+            
+            currentDog = dog
+            if !(currentDog?.photos.count == 0)  {
+                getData(from: URL(string: currentDog?.photos[0].large ?? "")!) { data, response, error in
+                    guard let data = data, error == nil else {return}
+                    DispatchQueue.main.async() { [weak self] in
+                        self?.dogImage.image = UIImage(data: data)
+                    }
                 }
             }
+        } else {
+            var imgLoadErroAlert = UIAlertController(title: "Img Could Not Load", message: "Img Could Not Load", preferredStyle: .alert)
+            imgLoadErroAlert.addAction( UIAlertAction(title: "OK", style: UIAlertAction.Style.default))
+            self.present(imgLoadErroAlert, animated: true, completion: nil)
         }
         
     }
@@ -76,22 +98,13 @@ class SwipingPageViewController: UIViewController {
         dismiss(animated:true, completion: nil)
     }
     
-    @IBOutlet weak var thumbImageView: UIImageView!
-    @IBOutlet weak var dogImage: UIImageView!
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    //@IBOutlet weak var imageView: UIImageView! // Holds image of dog
-    @IBOutlet weak var card: UIView!
-    var ogCardPoint: CGPoint?
-    var divisor: CGFloat!
-    var api = PetAPI()
-    var initToken: String?
-    var dogArray: [Dog]?
-    var currentDog: Dog?
+
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
         let point = sender.translation(in: view)
         let xFromCenter = card.center.x - view.center.x
+        let timeToResetCard = 0.2
         
         // Allow card to move
         card.center = CGPoint(x: ogCardPoint!.x + point.x, y: ogCardPoint!.y + point.y)
@@ -121,6 +134,11 @@ class SwipingPageViewController: UIViewController {
                     card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
                     card.alpha = 0
                 })
+                DispatchQueue.main.asyncAfter(deadline: .now() + timeToResetCard) {
+                       //call any function
+                    self.resetCard()
+                    self.loadCard()
+                }
                 return
             } else if card.center.x > (view.frame.width - 75) {
                 // Move card to right side
@@ -128,10 +146,13 @@ class SwipingPageViewController: UIViewController {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0
                 })
+                DispatchQueue.main.asyncAfter(deadline: .now() + timeToResetCard) {
+                       //call any function
+                    self.resetCard()
+                    self.loadCard()
+                }
                 return
             }
-            
-            
             
             // Animate card back to center
             UIView.animate(withDuration: 0.2, animations: {
@@ -141,6 +162,18 @@ class SwipingPageViewController: UIViewController {
             })
             loadCard()
         }
+        
+        // When card leaves screen, reset and load card back
+//        if card.frame.origin.x > 300 {
+//            print("HERE")
+//            // Animate card back to center
+//            UIView.animate(withDuration: 0.2, animations: {
+//                card.center = self.ogCardPoint!
+//                self.thumbImageView.alpha = 0
+//                self.card.transform = CGAffineTransform.identity
+//            })
+//            loadCard()
+//        }
         
     }
     
